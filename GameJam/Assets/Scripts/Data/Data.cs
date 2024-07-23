@@ -24,5 +24,17 @@ namespace Game.Data
             Gasoline -= gas;
             PlayerDataEvents.onGasEvent.Invoke(Gasoline.FormateToHudBarFloat());
         }
+        public void UpdateGas(float gas)
+        {
+            if (Gasoline + gas > MAXGAS) 
+            {
+                Gasoline = MAXGAS;
+            }
+            else
+            {
+                Gasoline += gas;
+            }
+            PlayerDataEvents.onGasEvent.Invoke(Gasoline.FormateToHudBarFloat());
+        }
     }
 }

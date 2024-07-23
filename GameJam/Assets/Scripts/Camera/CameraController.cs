@@ -57,7 +57,7 @@ namespace Game.Cam
         {
             while (true)
             {
-                if(Vector3.Distance(Agent.transform.position, intPos) < 4f)
+                if(Vector3.Distance(Agent.transform.position, intPos) < 4f && Agent.velocity.magnitude <= 0)
                 {
                     interactionAct.Invoke();
                     interactionAct = null;
