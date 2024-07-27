@@ -7,18 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Asa
+    second: {fileID: 2100000, guid: 5cbd69d3eff54ff4c84780a49f2d584d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Detal
-    second: {fileID: -3119969277571351040, guid: 14ea97cada3b8bd499bb2e1039b0127e, type: 3}
+    second: {fileID: 2100000, guid: 00ae5cec74c86d944becefdd179f7f93, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Engrenagem
-    second: {fileID: 7508319448361890368, guid: 14ea97cada3b8bd499bb2e1039b0127e, type: 3}
+    second: {fileID: 2100000, guid: 9c99653ec0c5f8e4aa13f4cf82eb303d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Garras
-    second: {fileID: 3535825620177847796, guid: f31b882cf45dc6242ae36b592d6b6a1b, type: 3}
+    second: {fileID: 2100000, guid: 21c9ca92c2a219c4e8b67b43580309cc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -27,8 +32,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Propulsor
+    second: {fileID: 2100000, guid: f57e7806dc6ab7f498496036efcf1fa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Vidro
-    second: {fileID: -179469233235446833, guid: f31b882cf45dc6242ae36b592d6b6a1b, type: 3}
+    second: {fileID: 2100000, guid: 60698257ae70d1b4aae3c9ad7cda3ca3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: detalhe
+    second: {fileID: 2100000, guid: 801796256fcc0b04290dbf2f7b404b6b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +55,7 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
-    motionNodeName: Garra
+    motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
@@ -122,7 +137,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0

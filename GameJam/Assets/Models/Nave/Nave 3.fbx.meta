@@ -8,12 +8,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Asa
-    second: {fileID: 802290921714584944, guid: f31b882cf45dc6242ae36b592d6b6a1b, type: 3}
+    second: {fileID: 2100000, guid: 5cbd69d3eff54ff4c84780a49f2d584d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Detal
+    second: {fileID: 2100000, guid: 00ae5cec74c86d944becefdd179f7f93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Engrenagem
+    second: {fileID: 2100000, guid: 9c99653ec0c5f8e4aa13f4cf82eb303d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Garras
-    second: {fileID: 3535825620177847796, guid: f31b882cf45dc6242ae36b592d6b6a1b, type: 3}
+    second: {fileID: 2100000, guid: 21c9ca92c2a219c4e8b67b43580309cc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -23,12 +33,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Propulsor
-    second: {fileID: -8975219784948928527, guid: f31b882cf45dc6242ae36b592d6b6a1b, type: 3}
+    second: {fileID: 2100000, guid: f57e7806dc6ab7f498496036efcf1fa8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Vidro
-    second: {fileID: -179469233235446833, guid: f31b882cf45dc6242ae36b592d6b6a1b, type: 3}
+    second: {fileID: 2100000, guid: 60698257ae70d1b4aae3c9ad7cda3ca3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
