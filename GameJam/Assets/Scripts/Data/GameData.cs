@@ -11,6 +11,18 @@ namespace Game.Data
 
         public int DayObject;
 
-        
+        public int MaxObject;
+
+        public int EnergyCollected;
+
+        public int MaxEnergy;
+
+        public int Day;
+
+
+
+
+
+
     }
 }

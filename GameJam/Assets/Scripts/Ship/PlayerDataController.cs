@@ -14,13 +14,10 @@ namespace Game.Data
         {
             Data.UpdateGas(gas);
         }
-        //public void CheckIfGasFull()
-        //{
-        //    if (Data.Gasoline >= Data.MAXGAS)
-        //    {
-        //        var fc = GetComponent<Flowchart>();
-        //        fc.SetBooleanVariable("GasFull", true);
-        //    }
-        //}
+        
+        
+
+
+
     }
 }

@@ -28,6 +28,13 @@ namespace Game
         {
             TurnInteractablesOn();
         }
+        private void Update()
+        {
+            if (Input.GetKeyUp(KeyCode.U))
+            {
+                InstantiateItems();
+            }
+        }
 
         private void TurnInteractablesOn()
         {
@@ -49,6 +56,21 @@ namespace Game
             }
             Debug.Log(index.ToString());
         }
+
+        public void InstantiateItems()
+        {
+            var spots = FindObjectsOfType<ItemSpot>();
+            int selectedSpot= Random.Range(0, spots.Length);
+            var item = FindAnyObjectByType<Item>();
+            if (item != null) 
+            {
+                item.gameObject.SetActive(true);
+                item.gameObject.transform.position = spots[selectedSpot].transform.position;
+                Debug.Log($"Item spawned in: {spots[selectedSpot].transform.position}");
+            }
+            
+        }
+
 
     }
 }

@@ -13,9 +13,46 @@ namespace Game
         {
             GameData.Money += money;
         }
-        public void AddToDayObject(int dayObject)
+        public void AddToDayObject()
         {
-            GameData.DayObject += dayObject;
+            GameData.DayObject++;
+            if(GameData.DayObject > GameData.MaxObject)
+            {
+                GameData.DayObject = GameData.MaxObject;
+            }
+        }
+
+        public void AddToEnergy()
+        {
+            GameData.EnergyCollected++;
+            if (GameData.EnergyCollected > GameData.MaxEnergy) 
+            {
+                GameData.EnergyCollected = GameData.MaxEnergy;
+            }
+        }
+        public bool ReturnEnergyFull()
+        {
+            return GameData.EnergyCollected == GameData.MaxEnergy;
+        }
+        public void ResetEnergy()
+        {
+            GameData.EnergyCollected = 0;
+        }
+        public void ResetObjs()
+        {
+            GameData.DayObject = 0;
+        }
+        public void SetMaxEnergy(int maxEnergy)
+        {
+            GameData.MaxEnergy = maxEnergy;
+        }
+        public void SetMaxObjects(int obj)
+        {
+            GameData.MaxObject = obj;
+        }
+        public void SetDay(int day)
+        {
+            GameData.Day = day;
         }
     }
 }

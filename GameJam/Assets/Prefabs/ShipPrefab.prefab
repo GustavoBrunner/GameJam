@@ -80,6 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cam: {fileID: 0}
   PlayerData: {fileID: 0}
+  GameController: {fileID: 0}
 --- !u!114 &7984329364230463161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +112,7 @@ MonoBehaviour:
   Data:
     Speed: 5
     Gasoline: 100
-    GasConsuming: 3
+    GasConsuming: 1.4
 --- !u!195 &2118598186706290705
 NavMeshAgent:
   m_ObjectHideFlags: 0

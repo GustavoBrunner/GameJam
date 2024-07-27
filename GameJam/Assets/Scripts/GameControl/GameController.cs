@@ -26,13 +26,18 @@ namespace Game
                 else
                 {
                     Ui.TurnGameUi();
+                    Ui.CloseResult();
+                    Ui.CloseStore();
                 }
             } 
         }
+        [SerializeField] private GameDataController GameDataController;
 
         [SerializeField] private Flowchart Flowchart;
 
         [SerializeField] private UiController Ui;
+
+        
 
         [SerializeField] private bool _gameStarted;
 
@@ -42,12 +47,17 @@ namespace Game
             GetReferences();
             //StartGame();
             GameEvents.StartGame.AddListener(StartDialogue);
+            
+            Ui.CloseResult();
+            Ui.CloseStore();
+            ChangeDay(1, 5, 2);
         }
 
         private void GetReferences()
         {
             Ui = FindAnyObjectByType<UiController>();
             Flowchart = GetComponent<Flowchart>();
+            GameDataController = GetComponent<GameDataController>();
         }
         public void StartDialogue()
         {
@@ -60,6 +70,26 @@ namespace Game
         public static void TurnInteractionOnOff(bool b = false)
         {
             isInteractionOn = b;
+        }
+        public void AddEnergy()
+        {
+            GameDataController.AddToEnergy();
+            Ui.SetEnergyText(GameDataController.GameData.EnergyCollected, GameDataController.GameData.MaxEnergy);
+        }
+        public void AddObject()
+        {
+            GameDataController.AddToDayObject();
+            Ui.SetOrderText(GameDataController.GameData.DayObject, GameDataController.GameData.MaxObject);
+        }
+        public void ChangeDay(int day, int maxEnergy, int maxObj)
+        {
+            GameDataController.ResetEnergy();
+            GameDataController.ResetObjs();
+            GameDataController.SetMaxEnergy(maxEnergy);
+            GameDataController.SetMaxObjects(maxObj);
+            GameDataController.SetDay(day);
+            Ui.SetEnergyText(GameDataController.GameData.EnergyCollected, GameDataController.GameData.MaxEnergy);
+            Ui.SetOrderText(GameDataController.GameData.DayObject, GameDataController.GameData.MaxObject);
         }
     }
 }
