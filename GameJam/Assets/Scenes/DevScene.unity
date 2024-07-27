@@ -859,6 +859,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 1508601953306484590, guid: 5d5825902b2477f4193468a7ce045196, type: 3}
+      propertyPath: _gameStarted
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d5825902b2477f4193468a7ce045196, type: 3}
 --- !u!1001 &1860944480084650910
@@ -982,6 +986,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5601433745059941802, guid: e0b9297e58ff3df4cb49ac5c6223eb85, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5601433745370960064, guid: e0b9297e58ff3df4cb49ac5c6223eb85, type: 3}
       propertyPath: m_Name
       value: UI
@@ -1068,6 +1076,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5601433745370960068, guid: e0b9297e58ff3df4cb49ac5c6223eb85, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5601433745930511535, guid: e0b9297e58ff3df4cb49ac5c6223eb85, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786512418084407748, guid: e0b9297e58ff3df4cb49ac5c6223eb85, type: 3}
+      propertyPath: m_Name
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786512418084407748, guid: e0b9297e58ff3df4cb49ac5c6223eb85, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

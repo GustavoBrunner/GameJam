@@ -7,6 +7,6 @@ namespace Game.Interaction
 {
     public record InteractionsConsts 
     {
-        public const string StartBlock = "StartInteraction";
+        public const string START_BLOCK = "StartInteraction";
     }
 }

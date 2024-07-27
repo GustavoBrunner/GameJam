@@ -11,18 +11,21 @@ namespace Game.Player
     {
         [SerializeField] private CameraController Cam;
         [SerializeField] private PlayerDataController PlayerData;
+        [SerializeField] private GameController GameController;
 
         private void Awake()
         {
             Cam = FindAnyObjectByType<CameraController>();
             PlayerData = GetComponent<PlayerDataController>();
+            GameController = FindAnyObjectByType<GameController>();
         }
 
         private void Update()
         {
             if (Input.GetMouseButtonDown(0) &&
                 !GameController.isInteractionOn && 
-                PlayerData.Data.Gasoline > 0f) 
+                PlayerData.Data.Gasoline > 0f &&
+                GameController.GameStarted) 
             {
                 Cam.RaycastCam();
             }

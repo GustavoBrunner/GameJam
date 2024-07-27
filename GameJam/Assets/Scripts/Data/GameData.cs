@@ -9,10 +9,8 @@ namespace Game.Data
     {
         public int Money;
 
+        public int DayObject;
 
-        public void ChangeMoney(int money) 
-        {
-            
-        }
+        
     }
 }

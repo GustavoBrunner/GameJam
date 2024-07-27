@@ -20,7 +20,7 @@ namespace Game.Interactables
         public virtual void Interact()
         {
             GameController.TurnInteractionOnOff(true);
-            flowchart.ExecuteBlock(InteractionsConsts.StartBlock);
+            flowchart.ExecuteBlock(InteractionsConsts.START_BLOCK);
         }
     }
 }

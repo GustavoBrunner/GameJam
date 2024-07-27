@@ -1,3 +1,4 @@
+using Game.Data;
 using Game.Interactables;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,6 +17,10 @@ namespace Game.Extension.Interactables
         public static void ResetStoppingDistance(this NavMeshAgent agent)
         {
             agent.stoppingDistance = 0;
+        }
+        public static bool CheckIfGasFull(this PlayerDataController controller) 
+        {
+            return controller.Data.Gasoline >= Data.Data.MAXGAS;
         }
     }
 }
