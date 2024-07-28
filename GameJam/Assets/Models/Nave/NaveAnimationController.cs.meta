@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8cfb184505ffbb64e8a3fbce5ed7856f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - naveModel1: {fileID: 919132149155446097, guid: c75624789b76d04429dca0974769c962, type: 3}
+  - naveModel2: {fileID: 919132149155446097, guid: 49cc1452364b93f49bb4ed7e5c362251, type: 3}
+  - naveModel3: {fileID: 919132149155446097, guid: 14ea97cada3b8bd499bb2e1039b0127e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

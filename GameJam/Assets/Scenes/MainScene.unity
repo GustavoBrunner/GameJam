@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00001872985, g: 0.000011903385, b: 0.00006187914, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -218,6 +218,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5350263477156346944, guid: 0e780903f7659d049ba9823e824edace, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5350263477156346947, guid: 0e780903f7659d049ba9823e824edace, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -6890,21 +6894,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4082001433802481069, guid: f8a0cff5e99ea254f9cbb728b380cd9e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4812020036541067757, guid: f8a0cff5e99ea254f9cbb728b380cd9e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4812020036541067757, guid: f8a0cff5e99ea254f9cbb728b380cd9e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4812020036541067757, guid: f8a0cff5e99ea254f9cbb728b380cd9e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4812020036541067757, guid: f8a0cff5e99ea254f9cbb728b380cd9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299727508401810263, guid: f8a0cff5e99ea254f9cbb728b380cd9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5540987769559337677, guid: f8a0cff5e99ea254f9cbb728b380cd9e, type: 3}
       propertyPath: m_RootOrder

@@ -268,10 +268,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb6e8a604714ef4bb9c857a1d5a669f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GasBar: {fileID: 5601433745120094452}
+  GasBar: {fileID: 0}
   Animator: {fileID: 0}
   GameUi: {fileID: 5601433745930511535}
   InitialMenu: {fileID: 5786512418084407748}
+  StoreMenu: {fileID: 0}
+  ResultMenu: {fileID: 0}
+  Energy: {fileID: 0}
+  Item: {fileID: 0}
 --- !u!1 &5601433745930511535
 GameObject:
   m_ObjectHideFlags: 0

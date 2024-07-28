@@ -1,9 +1,49 @@
 fileFormatVersion: 2
-guid: f31b882cf45dc6242ae36b592d6b6a1b
+guid: 88c31c0f5af25374e951a86b7643a6be
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Asa
+    second: {fileID: 2100000, guid: c365194de969d60448694e92792791d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Detal
+    second: {fileID: 2100000, guid: b0b7f014d19fa9f4c958c0aa39f63018, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Engrenagem
+    second: {fileID: 2100000, guid: 9c99653ec0c5f8e4aa13f4cf82eb303d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Garras
+    second: {fileID: 2100000, guid: 21c9ca92c2a219c4e8b67b43580309cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nave
+    second: {fileID: 2100000, guid: f44a346d6a08c34468d77f69642df6bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Propulsor
+    second: {fileID: 2100000, guid: 16211a92f8962cb46ad442af786ec21e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vidro
+    second: {fileID: 2100000, guid: 60698257ae70d1b4aae3c9ad7cda3ca3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: detalhe
+    second: {fileID: 2100000, guid: d3b1e179fcd73ed4ea34886b31d007eb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
