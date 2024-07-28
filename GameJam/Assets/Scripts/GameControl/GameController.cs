@@ -91,5 +91,9 @@ namespace Game
             Ui.SetEnergyText(GameDataController.GameData.EnergyCollected, GameDataController.GameData.MaxEnergy);
             Ui.SetOrderText(GameDataController.GameData.DayObject, GameDataController.GameData.MaxObject);
         }
+        public GameDataController GetGameData()
+        {
+            return GameDataController;
+        }
     }
 }

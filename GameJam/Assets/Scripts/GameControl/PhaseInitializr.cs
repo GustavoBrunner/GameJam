@@ -2,7 +2,7 @@ using Game.Interactables;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 
 namespace Game
 {
@@ -40,11 +40,9 @@ namespace Game
         {
             int index = 1;
             var count = interactables.Count - (int)(interactables.Count * 0.25);
-            Debug.Log($"{(int)(interactables.Count * 0.25)}, {count}");
             while (index <= count )
             {
                 var randon = Random.Range(0, interactables.Count);
-                Debug.Log(randon.ToString());
                 if (!intIndex.Contains(randon))
                 {
                     intIndex.Add(randon);
@@ -54,7 +52,6 @@ namespace Game
                 }
                 
             }
-            Debug.Log(index.ToString());
         }
 
         public void InstantiateItems()
@@ -69,6 +66,11 @@ namespace Game
                 Debug.Log($"Item spawned in: {spots[selectedSpot].transform.position}");
             }
             
+        }
+        public void TurnOnNextInteractable()
+        {
+            var interact = interactables.Where(i => !i.isActiveAndEnabled).FirstOrDefault().gameObject;
+            interact.SetActive(true);
         }
 
 
