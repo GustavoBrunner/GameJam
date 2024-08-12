@@ -10,18 +10,10 @@ namespace Game.Interactables
         public override void Interact()
         {
             var gameData = FindAnyObjectByType<GameController>().GetGameData();
-            if (gameData != null) 
-            {
-                if (gameData.GameData.EnergyCollected == gameData.GameData.MaxEnergy &&
-                    gameData.GameData.DayObject == gameData.GameData.MaxObject) 
-                {
-                    this.flowchart.ExecuteBlock(InteractionsConsts.FINISHED_OBJECTS_BLOCK);
-                }
-                else
-                {
-                    this.flowchart.ExecuteBlock(InteractionsConsts.UNFINISHED_OBJECTS_BLOCK);
-                }
-            }
+            flowchart.SetIntegerVariable("Object", gameData.GameData.DayObject);
+            flowchart.SetIntegerVariable("Energy", gameData.GameData.EnergyCollected);
+            flowchart.SetIntegerVariable("Day", gameData.GameData.Day);
+            base.Interact();
         }
     }
 }

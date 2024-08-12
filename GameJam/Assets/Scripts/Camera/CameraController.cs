@@ -1,5 +1,7 @@
+using Game.Consts;
 using Game.Contracts;
 using Game.Data;
+using Game.Events;
 using Game.Extension.Interactables;
 using Game.Interactables;
 using Game.Player;
@@ -19,12 +21,16 @@ namespace Game.Cam
         private Ray ray;
         [SerializeField] private MovementController movementController;
 
+        [SerializeField] private Animator Animator;
+
         private GameController gameController;
 
         [SerializeField] private NavMeshAgent Agent;
 
         [Range(0f,20f)]
         [SerializeField] private float TransitionSpeed;
+
+        [SerializeField] private GameObject FadeOne, FadeTwo, FadeThree, FadeFour, FadeFourText;
         
         private void Awake()
         {
@@ -33,6 +39,8 @@ namespace Game.Cam
             gameController = FindAnyObjectByType<GameController>();
 
             Agent = FindAnyObjectByType<NavMeshAgent>();
+
+            Animator = GetComponent<Animator>();
         }
         private void FixedUpdate()
         {
@@ -73,7 +81,7 @@ namespace Game.Cam
         {
             while (true)
             {
-                if(Vector3.Distance(Agent.transform.position, intPos) < 4f && Agent.velocity.magnitude <= 0)
+                if(Vector3.Distance(Agent.transform.position, intPos) < 3.5f && Agent.velocity.magnitude <= 0)
                 {
                     interactionAct.Invoke();
                     
@@ -91,6 +99,62 @@ namespace Game.Cam
                     new Vector3(Agent.transform.position.x, transform.position.y, Agent.transform.position.z),
                     Time.deltaTime * TransitionSpeed);
             }
+        }
+        public void PlayFirstBlackFade()
+        {
+            StartCoroutine(FirstFade());
+        }
+        public void PlaySecondBlackFade()
+        {
+            StartCoroutine(SecondFade());
+        }
+        public void PlayThirdBlackFade()
+        {
+            StartCoroutine(ThirdFade());
+        }
+        public void PlayForthBlackFade()
+        {
+            StartCoroutine(FourthFade());
+        }
+        public void ResetEvent()
+        {
+            GameEvents.onResetDay.Invoke();
+        }
+
+        public IEnumerator FirstFade()
+        {
+            FadeOne.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            GameEvents.onResetDay.Invoke();
+            yield return new WaitForSeconds(3f);
+            FadeOne.SetActive(false);
+
+        }
+        public IEnumerator SecondFade()
+        {
+            FadeTwo.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            GameEvents.onResetDay.Invoke();
+            yield return new WaitForSeconds(3f);
+            FadeTwo.SetActive(false);
+            GameController.TurnInteractionOnOff(false);
+        }
+        public IEnumerator ThirdFade()
+        {
+            FadeThree.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(3f);
+            FadeThree.SetActive(false);
+            Application.Quit();
+        }
+        public IEnumerator FourthFade()
+        {
+            FadeFour.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            FadeFourText.SetActive(true);
+            yield return new WaitForSeconds(5f);
+            
+            Application.Quit();
         }
     }
 }

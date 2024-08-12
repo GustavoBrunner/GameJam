@@ -1,4 +1,5 @@
 using Game.Data;
+using Game.Events;
 using Game.GamePhysics;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,6 +15,8 @@ namespace Game.Player
         [field: SerializeField] public PhysicsController PhysicsController {  get; private set; }
         [field: SerializeField] public NavMeshAgent Agent {  get; private set; }
         [field: SerializeField] public PlayerDataController Data {  get; private set; }
+
+        [SerializeField] private Vector3 initialPos;
         
 
         [SerializeField] private Quaternion playerRotation = Quaternion.identity;
@@ -24,6 +27,8 @@ namespace Game.Player
             Agent = GetComponent<NavMeshAgent>();
             Data = GetComponent<PlayerDataController>();
             Agent.speed = Data.Data.Speed;
+            initialPos = transform.position;
+            GameEvents.onResetDay.AddListener(ResetPosition);
         }
         private void FixedUpdate()
         {
@@ -41,30 +46,10 @@ namespace Game.Player
                 Data.Data.ConsumGas(Time.deltaTime * Data.Data.GasConsuming);
             }
         }
-        //public void MoveFoward()
-        //{
-        //    PhysicsController.Rb.AddForce(transform.forward * 6f , ForceMode.Force);
-        //}
-        //public void MoveBackward()
-        //{
-        //    PhysicsController.Rb.AddForce(-transform.forward * 6f, ForceMode.Force);
-        //}
-        //public void RotateRight()
-        //{
-        //    playerRotation.y += Time.deltaTime * 50f;
-            
-        //    Quaternion rotation = Quaternion.Euler(playerRotation.x, playerRotation.y, playerRotation.z);
-        //    PhysicsController.Rb.rotation = rotation;
-        //    //this.transform.rotation = Quaternion.Lerp(transform.rotation,
-        //    //    Quaternion.Euler(0f, playerRotation.eulerAngles.y, 0f), Time.deltaTime);
-        //}
-        //public void RotateLeft()
-        //{
-        //    playerRotation.y -= Time.deltaTime * 50f;
-        //    Quaternion rotation = Quaternion.Euler(playerRotation.x, playerRotation.y, playerRotation.z);
-        //    PhysicsController.Rb.rotation = rotation;
-        //    //this.transform.rotation = Quaternion.Lerp(transform.rotation,
-        //    //    Quaternion.Euler(0f, playerRotation.eulerAngles.y, 0f), Time.deltaTime);
-        //}
+        private void ResetPosition()
+        {
+            Agent.destination = initialPos;
+
+        }
     }
 }

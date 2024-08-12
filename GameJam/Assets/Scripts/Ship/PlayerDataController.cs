@@ -15,7 +15,10 @@ namespace Game.Data
             Data.UpdateGas(gas);
         }
         
-        
+        public void ResetGas()
+        {
+            Data.UpdateGas(100);
+        }
 
 
 

@@ -50,7 +50,17 @@ namespace Game
             
             Ui.CloseResult();
             Ui.CloseStore();
-            ChangeDay(1, 5, 2);
+            Ui.TurnObjsOff();
+
+            
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Keypad1)) 
+            {
+                AddEnergy();
+            }
         }
 
         private void GetReferences()
@@ -62,6 +72,10 @@ namespace Game
         public void StartDialogue()
         {
             Flowchart.ExecuteBlock(InteractionsConsts.START_BLOCK);
+        }
+        public void SecondDialogue()
+        {
+            Flowchart.ExecuteBlock(InteractionsConsts.SECOND_BLOCK);
         }
         public void StartGame()
         {
@@ -75,19 +89,24 @@ namespace Game
         {
             GameDataController.AddToEnergy();
             Ui.SetEnergyText(GameDataController.GameData.EnergyCollected, GameDataController.GameData.MaxEnergy);
+            Flowchart.SetIntegerVariable("Energy", GameDataController.GameData.EnergyCollected);
         }
         public void AddObject()
         {
             GameDataController.AddToDayObject();
             Ui.SetOrderText(GameDataController.GameData.DayObject, GameDataController.GameData.MaxObject);
+            Flowchart.SetIntegerVariable("Object", GameDataController.GameData.DayObject);
         }
         public void ChangeDay(int day, int maxEnergy, int maxObj)
         {
             GameDataController.ResetEnergy();
+            Flowchart.SetIntegerVariable("Energy", 0);
             GameDataController.ResetObjs();
+            Flowchart.SetIntegerVariable("Objects", 0);
             GameDataController.SetMaxEnergy(maxEnergy);
             GameDataController.SetMaxObjects(maxObj);
             GameDataController.SetDay(day);
+            Flowchart.SetIntegerVariable("Day", GameDataController.GameData.Day);
             Ui.SetEnergyText(GameDataController.GameData.EnergyCollected, GameDataController.GameData.MaxEnergy);
             Ui.SetOrderText(GameDataController.GameData.DayObject, GameDataController.GameData.MaxObject);
         }

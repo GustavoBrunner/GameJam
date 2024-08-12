@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Game.Events;
 
 namespace Game
 {
@@ -11,33 +12,34 @@ namespace Game
         [SerializeField] private List<Interactable> interactables = new List<Interactable>();
 
         [SerializeField] private List<int> intIndex = new List<int>();
+
+        private GameDataController controller;
         private void Awake()
         {
             interactables.AddRange(FindObjectsOfType<Interactable>());
+            
+            controller = GetComponent<GameDataController>();
+
+            //GameEvents.onResetDay.AddListener(TurnInteractablesOn);
+        }
+        private void Start()
+        {
+            TurnInteractablesOn();
+            //InstantiateItems();
+        }
+        
+
+        public void TurnInteractablesOn()
+        {
             foreach (var interactable in interactables)
             {
-                if(interactable.gameObject.name == "base")
+                if (interactable.gameObject.name == "base" || interactable.gameObject.name == "entidade")
                 {
                     interactables.Remove(interactable);
                     break;
                 }
                 interactable.gameObject.SetActive(false);
             }
-        }
-        private void Start()
-        {
-            TurnInteractablesOn();
-        }
-        private void Update()
-        {
-            if (Input.GetKeyUp(KeyCode.U))
-            {
-                InstantiateItems();
-            }
-        }
-
-        private void TurnInteractablesOn()
-        {
             int index = 1;
             var count = interactables.Count - (int)(interactables.Count * 0.25);
             while (index <= count )
@@ -56,15 +58,17 @@ namespace Game
 
         public void InstantiateItems()
         {
+            
             var spots = FindObjectsOfType<ItemSpot>();
             int selectedSpot= Random.Range(0, spots.Length);
-            var item = FindAnyObjectByType<Item>();
-            if (item != null) 
+            var item = FindObjectOfType<Item>();
+            if (item != null)
             {
                 item.gameObject.SetActive(true);
                 item.gameObject.transform.position = spots[selectedSpot].transform.position;
                 Debug.Log($"Item spawned in: {spots[selectedSpot].transform.position}");
             }
+
             
         }
         public void TurnOnNextInteractable()

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2922265280485367567}
   - component: {fileID: 2922265280485367566}
   - component: {fileID: 2922265280485367569}
-  - component: {fileID: 2922265280485367568}
   - component: {fileID: 2922265280485367571}
   - component: {fileID: 2922265280485367570}
   - component: {fileID: 2922265280485367573}
@@ -33,8 +32,6 @@ GameObject:
   - component: {fileID: 2922265280485366013}
   - component: {fileID: 2922265280485366012}
   - component: {fileID: 2922265280485366014}
-  - component: {fileID: 7249123640167490294}
-  - component: {fileID: 3331274291608235686}
   - component: {fileID: 8202181484593099773}
   - component: {fileID: 7684221372100517077}
   - component: {fileID: 4282394172055511564}
@@ -101,7 +98,7 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 8202181484593099773}
+  - {fileID: 2922265280485367572}
   selectedCommands: []
   variables:
   - {fileID: 2922265280485367555}
@@ -142,7 +139,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 2922265280485366014}
   - {fileID: 2922265280485367569}
-  - {fileID: 2922265280485367568}
   - {fileID: 2922265280485367571}
   - {fileID: 2922265280485367553}
   - {fileID: 2922265280485367570}
@@ -166,34 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: "Este \xE9 um objeto interativo."
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &2922265280485367568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2922265280485367577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 2
-  indentLevel: 0
-  storyText: "Se o capturar, ir\xE1 recuperar energia."
+  storyText: "Voc\xEA encontrou uma fonte de energia escura."
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -285,7 +254,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 2922265280485367574}
   - {fileID: 2922265280485367560}
-  - {fileID: 7249123640167490294}
   - {fileID: 4282394172055511564}
   suppressAllAutoSelections: 0
 --- !u!114 &2922265280485367572
@@ -492,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3561d372e73de174a99020053228b03c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MinDistance>k__BackingField: 2
+  <MinDistance>k__BackingField: 1
   <flowchart>k__BackingField: {fileID: 0}
 --- !u!114 &2922265280485367553
 MonoBehaviour:
@@ -857,7 +825,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 2922265280485366013}
   - {fileID: 2922265280485366012}
-  - {fileID: 3331274291608235686}
   - {fileID: 1303991322921451918}
   suppressAllAutoSelections: 0
 --- !u!114 &2922265280485366013
@@ -930,7 +897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 21
   indentLevel: 0
-  storyText: "Voc\xEA coletou um objeto!"
+  storyText: "Voc\xEA coletou energia!"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -966,118 +933,6 @@ MonoBehaviour:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Game.Data.PlayerDataController, Assembly-CSharp
         m_MethodName: CheckIfGasFull
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &7249123640167490294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2922265280485367577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 27
-  indentLevel: 0
-  description: 
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5383936102065846594, guid: 5d5825902b2477f4193468a7ce045196, type: 3}
-        m_TargetAssemblyTypeName: Game.PhaseInitializr, Assembly-CSharp
-        m_MethodName: TurnOnNextInteractable
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &3331274291608235686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2922265280485367577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 28
-  indentLevel: 0
-  description: 
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5383936102065846594, guid: 5d5825902b2477f4193468a7ce045196, type: 3}
-        m_TargetAssemblyTypeName: Game.PhaseInitializr, Assembly-CSharp
-        m_MethodName: TurnOnNextInteractable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

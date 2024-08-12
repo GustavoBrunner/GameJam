@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Game.Events;
 
 namespace Game.Ui
 {
@@ -15,7 +16,7 @@ namespace Game.Ui
 
         [SerializeField] private Animator Animator;
 
-        [SerializeField] private GameObject GameUi, InitialMenu, StoreMenu, ResultMenu;
+        [SerializeField] private GameObject GameUi, InitialMenu, StoreMenu, ResultMenu, ObjsUi;
 
         [SerializeField] private TMP_Text Energy, Item;
         private void Awake()
@@ -27,6 +28,16 @@ namespace Game.Ui
         private void ConsumGas(float gas)
         {
             GasBar.value = gas;
+        }
+        
+
+        public void TurnObjsOn()
+        {
+            ObjsUi.gameObject.SetActive(true);
+        }
+        public void TurnObjsOff()
+        {
+            ObjsUi.gameObject.SetActive(false);
         }
 
         internal void TurnMainMenu()
@@ -74,5 +85,11 @@ namespace Game.Ui
             ResultMenu.gameObject.SetActive(false);
 
         }
+
+        public void Exit()
+        {
+            Application.Quit();
+        }
+        
     }
 }
